@@ -19,7 +19,10 @@ Route::get('/Home', function(){
     return view('adminViews.home');
  });
 
-Route::get('/cadastro','adminController\CadastroController@cadastrar')->name('realizarCadastro');// ao nomear uma rota é possivel fazer direcionamentos, capturas...
-Route::post('/cadastro','adminController\CadastroController@cadastrarAcao');
+Route::get('/cadastroPet','adminController\PetController@cadastrarPet')->name('realizarCadastroPet');// ao nomear uma rota é possivel fazer direcionamentos, capturas...
+Route::post('/cadastroPet','adminController\PetController@cadastrarPetAction');
 
 Route::get('/informacaoPet','adminController\InformacaoPetController@BuscaInformacao')->name('exibeDados');
+
+Route::get('/cadastroVaccine','adminController\VaccineController@cadastrarVaccine')->name('realizarCadastroVaccine');
+Route::post('/cadastroVaccine','adminController\VaccineController@cadastrarVacineAction');
