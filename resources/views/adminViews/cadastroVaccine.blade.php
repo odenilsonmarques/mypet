@@ -11,11 +11,20 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12">
-                                <label for="type_vaccine" class="form-label">Vacina</label>
+                                <label for="type_vaccine" class="form-label">Tipo da Vacina</label>
                                 <select name="type_vaccine" class="form-select">
                                     <option value="">Selecione</option>
-                                    <option value="Cachorro">Cachorro</option>
-                                    <option value="Gato">Gato</option>
+                                    <option value="antirrábica">antirrábica</option>
+                                    <option value="contra a giardíase">contra a giardíase</option>
+                                    <option value="contra a gripe canina">contra a gripe canina</option>
+                                    <option value="contra a leishmaniose">contra a leishmaniose</option>
+                                    <option value="múltipla ou polivalente">múltipla ou polivalente</option>
+                                    <option value="Tosse dos canis">Tosse dos canis</option>
+                                    <option value="V3 felina">V3 felina</option>
+                                    <option value="V4 felina">V4 felina</option>
+                                    <option value="V5 felina">V5 felina</option>
+                                    <option value="vacina V8">vacina V8</option>
+                                    <option value="vacina V10">vacina V10</option>
                                 </select>
                             </div>
                         </div><br>
@@ -32,11 +41,12 @@
 
                         <div class="row">
                             <div class="col-sm-12">
-                                <label for="type_vaccine" class="form-label">Pet</label>
-                                <select name="type_vaccine" class="form-select">
+                                <label class="form-label">Pet</label>
+                                <select name="pet_id" class="form-select">
                                     <option value="">Selecione</option>
-                                    <option value="Cachorro">Cachorro</option>
-                                    <option value="Gato">Gato</option>
+                                    @foreach($pet as $nomes)
+                                        <option value="{{$nomes['pet_id']}}">{{$nomes['name']}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div><br>

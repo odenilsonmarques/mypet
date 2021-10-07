@@ -25,4 +25,4 @@ Route::post('/cadastroPet','adminController\PetController@cadastrarPetAction');
 Route::get('/informacaoPet','adminController\InformacaoPetController@BuscaInformacao')->name('exibeDados');
 
 Route::get('/cadastroVaccine','adminController\VaccineController@cadastrarVaccine')->name('realizarCadastroVaccine');
-Route::post('/cadastroVaccine','adminController\VaccineController@cadastrarVacineAction');
+Route::post('/cadastroVaccine','adminController\VaccineController@cadastrarVaccineAction');
