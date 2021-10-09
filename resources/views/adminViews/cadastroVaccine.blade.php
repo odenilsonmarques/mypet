@@ -42,15 +42,15 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <label class="form-label">Pet</label>
+                                <!--o valor pet_id refere-se ao valor da coluna id da tabela que será recuperado e salvo na tabela vaccines-->
                                 <select name="pet_id" class="form-select">
                                     <option value="">Selecione</option>
                                     @foreach($pet as $nomes)
-                                        <option value="{{$nomes['pet_id']}}">{{$nomes['name']}}</option>
+                                        <option value="{{$nomes['id']}}">{{$nomes['name']}}</option>
                                     @endforeach
                                 </select>
                             </div>
                         </div><br>
-
                     </div>
                 </div>
                 <div class="card">

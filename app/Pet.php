@@ -11,6 +11,6 @@ class Pet extends Model
 
     //aqui estou chamando o metodo hasmany(tem muitos), pois nessa regra de negócio um pet pode tomar uma ou mais vacina
     public function vaccines(){
-        return $this->hasMany(vaccine::class);
+        return $this->hasMany(Vaccine::class);
     }
 }
