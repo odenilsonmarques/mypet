@@ -13,6 +13,7 @@ primeira linha vai procurar pelo controller criado e não mais pela classe contr
 namespace App\Http\Controllers\adminController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoragePetRequest;
 use App\Pet;
 
 class PetController extends Controller
@@ -22,8 +23,16 @@ class PetController extends Controller
         return view('adminViews.cadastroPet');
     }
 
-    //Metodo para realizar o cadastro
-    public function cadastrarPetAction(Request $request){
+    /*
+    Metodo para realizar o cadastro. Como primeiro parametro chamei o objeto (StoragePetRequest) que foi criado e que também acaba sendo utilizado para 
+    tratamento das mensagem de valição. porem poderia ser usado apenas o  (Request), nesse caso teria que usar o objeto validade para validar as mensagem, 
+    no entado a ideia é deixar o controller mais enxuto possivel
+
+    obs:o nome desse objeto passado no primeiro parametro deve iniciar com letra maiuscula, uma boa pratica
+    é especificar o nome de a cordo com a ação do objeto no caso abaixo strorage(armazena/salva)pet(nome do model)request(refere ao objeto)
+    */
+    public function cadastrarPetAction(StoragePetRequest $request){
+        
         $name = $request->input('name');
         $breed = $request->input('breed');
         $sex = $request->input('sex');
@@ -44,6 +53,7 @@ class PetController extends Controller
         $pet->save();
 
         return redirect()->route('exibeDados');
+        
 
     }
 }

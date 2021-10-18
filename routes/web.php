@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('adminViews.welcome');
 });
 
-Route::get('/Home', function(){
-    return view('adminViews.home');
- });
+Route::get('/Home', 'adminController\HomeController@home')->name('pageHome');
 
 Route::get('/cadastroPet','adminController\PetController@cadastrarPet')->name('realizarCadastroPet');// ao nomear uma rota é possivel fazer direcionamentos, capturas...
 Route::post('/cadastroPet','adminController\PetController@cadastrarPetAction');

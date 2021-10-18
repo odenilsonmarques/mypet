@@ -2,10 +2,49 @@ body
 {
     padding: 10px;
 }
-.tituloPagina h3
+img 
+{
+    width: 200px;
+    margin-top: 70px;
+}
+.textoMeuPet
+{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color:dimgray;
+}
+
+#texto
+{
+    font-size: 25px;
+}
+
+a{
+    text-decoration: none;
+    color:blanchedalmond;
+}
+
+a:hover
+{
+    color:#FFF;
+}
+
+.nav
+{
+    padding: 10px;
+    border-radius: 10px;
+}
+.nav a{
+    color: blanchedalmond;
+    font-size: 19px;
+}
+
+.nav a:hover{
+    color: #FFF;
+    
+}
+
+.frmbody
 {
     margin-top: 20px;
-}
-#formDistribuidor{
-    margin-left:10px;
 }

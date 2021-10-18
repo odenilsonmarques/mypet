@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\adminController;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StorageVaccineRequest;
 use Illuminate\Http\Request;
 use App\Vaccine;
 use App\Pet;
@@ -14,7 +15,7 @@ class VaccineController extends Controller
         return view('adminViews.cadastroVaccine',['pet'=>$allPet]);
     }
 
-    public function cadastrarVaccineAction(Request $request){
+    public function cadastrarVaccineAction(StorageVaccineRequest $request){
         $type_vaccine = $request->input('type_vaccine');
         $date_vaccine = $request->input('date_vaccine');
         $number_dosage = $request->input('number_dosage');
