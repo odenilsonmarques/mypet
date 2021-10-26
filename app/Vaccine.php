@@ -1,8 +1,9 @@
 <?php
 
 namespace App;
-
 use Illuminate\Database\Eloquent\Model;
+use App\Pet;
+
 
 class Vaccine extends Model
 {
@@ -12,7 +13,7 @@ class Vaccine extends Model
     //aqui estou chamando o metodo belongTo(pertence a), pois nessa regra de negócio uma vacina está relacionas a pelo meno um pet
     // não é preciso especificar o valor das chavees, pois estou usndo o valor padrao do frame nas tabelas, caso naõ estivesse teria que especificar o nome das colunas
     public function pet(){
-        return $this->belongTo(Pet::class);
+        return $this->belongsTo(Pet::class);
     }
 }
 

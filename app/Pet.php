@@ -1,8 +1,9 @@
 <?php
 
 namespace App;
-
 use Illuminate\Database\Eloquent\Model;
+use App\Vaccine;//linha opcional
+
 
 class Pet extends Model
 {

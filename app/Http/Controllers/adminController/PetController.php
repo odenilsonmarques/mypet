@@ -49,11 +49,7 @@ class PetController extends Controller
         $pet->weight = $weight;
         $pet->description = $description;
         $pet->type_pet = $type_pet;
-
         $pet->save();
-
-        return redirect()->route('exibeDados');
-        
-
+        return redirect()->route('listPetList');
     }
 }

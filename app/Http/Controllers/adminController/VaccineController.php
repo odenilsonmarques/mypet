@@ -27,6 +27,6 @@ class VaccineController extends Controller
         $vaccine->number_dosage = $number_dosage;
         $vaccine->pet_id = $pet;
         $vaccine->save();
+        return redirect()->route('listPetList');
     }
-
 }

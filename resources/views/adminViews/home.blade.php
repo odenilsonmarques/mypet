@@ -29,7 +29,7 @@
         <div class="col-sm-4 text-center">
             <div class="card bg-secondary">
                 <div class="card-body" id="texto">
-                    <a href="#">Pet</a>
+                    <a href="{{route('listPetList')}}">Pet</a>
                 </div>
             </div>
         </div>

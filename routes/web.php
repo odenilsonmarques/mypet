@@ -20,7 +20,7 @@ Route::get('/Home', 'adminController\HomeController@home')->name('pageHome');
 Route::get('/cadastroPet','adminController\PetController@cadastrarPet')->name('realizarCadastroPet');// ao nomear uma rota é possivel fazer direcionamentos, capturas...
 Route::post('/cadastroPet','adminController\PetController@cadastrarPetAction');
 
-Route::get('/informacaoPet','adminController\InformacaoPetController@BuscaInformacao')->name('exibeDados');
+Route::get('/listPet','adminController\ListPetController@list')->name('listPetList');
 
 Route::get('/cadastroVaccine','adminController\VaccineController@cadastrarVaccine')->name('realizarCadastroVaccine');
 Route::post('/cadastroVaccine','adminController\VaccineController@cadastrarVaccineAction');
