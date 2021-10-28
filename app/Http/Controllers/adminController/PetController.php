@@ -50,6 +50,8 @@ class PetController extends Controller
         $pet->description = $description;
         $pet->type_pet = $type_pet;
         $pet->save();
-        return redirect()->route('listPetList');
+        return redirect()->route('listPetList')
+        //a msg abaixo só será exibida se o processo de cadastro acontecer. Esta mensagem é conhecida como (flash mensage). Está será exibida na pagina que lista os dados do pet, sendo acessada através da funcao session
+        ->with('mensagemDeCadastro', 'Cadastro realizado com sucesso!');
     }
 }
