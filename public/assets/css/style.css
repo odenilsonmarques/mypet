@@ -53,3 +53,8 @@ a:hover
 {
     font-size: 70px;
 }
+
+tr
+{
+    text-align: center;
+}

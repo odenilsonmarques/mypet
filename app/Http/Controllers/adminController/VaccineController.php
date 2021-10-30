@@ -10,12 +10,12 @@ use App\Pet;
 class VaccineController extends Controller
 {
     //Metodo para chamar a view de cadastro, aqui também é chamado a classe Pet junto do metodo all para busca todos os pet e lista na view cadastroVaccine 
-    public function cadastrarVaccine(){
+    public function add(){
         $allPet = Pet::all();
-        return view('adminViews.cadastroVaccine',['pet'=>$allPet]);
+        return view('adminViews.cadVaccine',['pet'=>$allPet]);
     }
 
-    public function cadastrarVaccineAction(StorageVaccineRequest $request){
+    public function addAction(StorageVaccineRequest $request){
         $type_vaccine = $request->input('type_vaccine');
         $date_vaccine = $request->input('date_vaccine');
         $number_dosage = $request->input('number_dosage');
@@ -27,6 +27,8 @@ class VaccineController extends Controller
         $vaccine->number_dosage = $number_dosage;
         $vaccine->pet_id = $pet;
         $vaccine->save();
-        return redirect()->route('listPetList');
+        return redirect()->route('walletPetList')
+        //a msg abaixo só será exibida se o processo de cadastro acontecer. Esta mensagem é conhecida como (flash mensage). Está será exibida na pagina que lista os dados do pet, sendo acessada através da funcao session
+        ->with('mensagemDeCadastro', 'Vacina cadastrada com sucesso!');
     }
 }

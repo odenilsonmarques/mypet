@@ -17,10 +17,13 @@ Route::get('/', function () {
 
 Route::get('/Home', 'adminController\HomeController@home')->name('pageHome');
 
-Route::get('/cadastroPet','adminController\PetController@cadastrarPet')->name('realizarCadastroPet');// ao nomear uma rota é possivel fazer direcionamentos, capturas...
-Route::post('/cadastroPet','adminController\PetController@cadastrarPetAction');
+Route::get('/cadPet','adminController\PetController@add')->name('cadPetAdd');// ao nomear uma rota é possivel fazer direcionamentos, capturas...
+Route::post('/cadPet','adminController\PetController@addAction');
 
-Route::get('/listPet','adminController\ListPetController@list')->name('listPetList');
+Route::get('/walletPet','adminController\ListPetController@list')->name('walletPetList');
 
-Route::get('/cadastroVaccine','adminController\VaccineController@cadastrarVaccine')->name('realizarCadastroVaccine');
-Route::post('/cadastroVaccine','adminController\VaccineController@cadastrarVaccineAction');
+Route::get('/cadVaccine','adminController\VaccineController@add')->name('cadVaccineAdd');
+Route::post('/cadVaccine','adminController\VaccineController@addAction');
+
+
+Route::get('/allPets','adminController\ListPetController@all')->name('allPetsAll');

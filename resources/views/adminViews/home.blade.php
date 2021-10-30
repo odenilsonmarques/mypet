@@ -11,25 +11,33 @@
         </div>
     </div><br/>
     <div class="row">
-        <div class="col-sm-4 text-center">
+        <div class="col-sm-3 text-center">
             <div class="card bg-secondary">
                 <div class="card-body" id="texto">
-                    <a href="{{route('realizarCadastroPet')}}">Cadastrar Pet</a>
+                    <a href="{{route('cadPetAdd')}}">Cadastrar Pet</a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 text-center">
+        <div class="col-sm-3 text-center">
             <div class="card bg-secondary">
                 <div class="card-body" id="texto">
-                    <a href="{{route('realizarCadastroVaccine')}}">Cadastrar Vacina</a>
+                    <a href="{{route('cadVaccineAdd')}}">Cadastrar Vacina</a>
                 </div>
             </div>
         </div>
 
-        <div class="col-sm-4 text-center">
+        <div class="col-sm-3 text-center">
             <div class="card bg-secondary">
                 <div class="card-body" id="texto">
-                    <a href="{{route('listPetList')}}">Pet</a>
+                    <a href="{{route('allPetsAll')}}">Pets</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3 text-center">
+            <div class="card bg-secondary">
+                <div class="card-body" id="texto">
+                    <a href="{{route('walletPetList')}}">Carteira de Vacina</a>
                 </div>
             </div>
         </div>

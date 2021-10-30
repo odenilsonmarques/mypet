@@ -12,8 +12,15 @@ class ListPetController extends Controller
     //o nome pet passado apos o método with refere-se ao nome do metodo declarado no medel vaccine
     public function list(){
         $pets = Vaccine::with('pet')->get();
-        return view('adminViews.listPet',['pets'=>$pets]);
+        return view('adminViews.walletPet',['pets'=>$pets]);
         // dd($pets);
+    }
+
+    //metodo para listar todos os pets
+    public function all(){
+        $allPets = Pet::all();
+        return view('adminViews.allPets',['allPets'=>$allPets]);
+
     }
 
 }

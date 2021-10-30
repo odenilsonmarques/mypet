@@ -19,8 +19,8 @@ use App\Pet;
 class PetController extends Controller
 {
     //Metodo para chamar a view de cadastro
-    public function cadastrarPet(){
-        return view('adminViews.cadastroPet');
+    public function add(){
+        return view('adminViews.cadPet');
     }
 
     /*
@@ -31,7 +31,7 @@ class PetController extends Controller
     obs:o nome desse objeto passado no primeiro parametro deve iniciar com letra maiuscula, uma boa pratica
     é especificar o nome de a cordo com a ação do objeto no caso abaixo strorage(armazena/salva)pet(nome do model)request(refere ao objeto)
     */
-    public function cadastrarPetAction(StoragePetRequest $request){
+    public function addAction(StoragePetRequest $request){
         
         $name = $request->input('name');
         $breed = $request->input('breed');
@@ -50,8 +50,8 @@ class PetController extends Controller
         $pet->description = $description;
         $pet->type_pet = $type_pet;
         $pet->save();
-        return redirect()->route('listPetList')
+        return redirect()->route('allPetsAll')
         //a msg abaixo só será exibida se o processo de cadastro acontecer. Esta mensagem é conhecida como (flash mensage). Está será exibida na pagina que lista os dados do pet, sendo acessada através da funcao session
-        ->with('mensagemDeCadastro', 'Cadastro realizado com sucesso!');
+        ->with('mensagemDeCadastro', 'Pet cadastrado com sucesso!');
     }
 }
