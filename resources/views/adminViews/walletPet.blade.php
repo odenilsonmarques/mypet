@@ -2,14 +2,13 @@
 @section('title','pets')
 
 @section('content')
+    
     <div class="row">
         <div class="col-sm-12">
-            @if(session('mensagemDeCadastro'))
-                <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
-                    <strong>{{session('mensagemDeCadastro')}}</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            @endif
+            <div class="carteira text-center">
+                <img src="{{('assets/img/pet1.png')}}" alt=""><br><br>
+                <h2>Carteira de Vacinação</h2><br>
+            </div>
             <div class="table-responsive">  
                 <table class="table table-hover table-striped">
                     <thead>

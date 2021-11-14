@@ -10,6 +10,20 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
+
+            @if(session('mensagemDeEdicao'))
+                <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+                    <strong>{{session('mensagemDeEdicao')}}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            <!--está mensagem só será exibida caso tente deletar um pet atrelado há uma vacina, caso contrario apenas irá exibir a mensagem javascript-->
+            @if(session('messageError'))
+                <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+                    <strong>{{session('messageError')}}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <div class="table-responsive">  
                 <table class="table table-hover table-striped">
                     <thead>
@@ -21,6 +35,7 @@
                             <th>PESO</th>
                             <th>IDADE</th>
                             <th>DESCRIÇÃO</th>
+                            <th>AÇÃO</th>
                         </tr>
                     </thead>
                     @foreach ($allPets as $allPet)
@@ -32,7 +47,10 @@
                             <td>{{$allPet->weight}}</td>
                             <td>{{$allPet->age}}</td>
                             <td>{{$allPet->description}}</td>
-                            
+                            <td>
+                                <a href="{{route('editPetEdit',[$allPet->id])}}" class="btn btn-primary btn-sm">Editar</a>
+                                <a href="{{route('delPetDelete',[$allPet->id])}}" onclick="return confirm('CONFIRMAR EXCLUSÃO ?')" class="btn btn-danger btn-sm">Deletar</a>
+                            </td>
                         </tr>
                     @endforeach
                 </table>

@@ -58,3 +58,23 @@ tr
 {
     text-align: center;
 }
+
+.carteira img
+{
+    height: 150px;
+    width:  150px;
+    border: 2px solid #FFF;
+    border-radius: 100px;
+    margin-top: 10px;
+    
+}
+.carteira
+{
+    background-color: dimgray;
+    border-radius: 10px;
+}
+
+.carteira h2{
+    color: #FFF;
+
+}

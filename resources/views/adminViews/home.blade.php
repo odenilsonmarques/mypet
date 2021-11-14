@@ -21,10 +21,11 @@
         <div class="col-sm-3 text-center">
             <div class="card bg-secondary">
                 <div class="card-body" id="texto">
-                    <a href="{{route('cadVaccineAdd')}}">Cadastrar Vacina</a>
+                    <a href="{{route('allVaccinesAll')}}">Vacinas</a>
                 </div>
             </div>
         </div>
+
 
         <div class="col-sm-3 text-center">
             <div class="card bg-secondary">
