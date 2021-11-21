@@ -5,43 +5,40 @@ body
 img 
 {
     width: 200px;
+    height: 200px;
     margin-top: 70px;
+    border-radius: 100px;
+
 }
 .textoMeuPet
 {
-    margin-top: 25px;
+    margin-top: 20px;
     margin-bottom: 25px;
-    color:dimgray;
+    color:#D91A1A;
+    font-size: 30px;
+    font-weight: bolder;
 }
 
-#texto
-{
-    font-size: 25px;
+header .container .navbar-secondary{
+    background-color: #D95555;
 }
-
-a{
-    text-decoration: none;
-    color:blanchedalmond;
-}
-
-a:hover
-{
-    color:#FFF;
-}
-
-.nav
+.nav.justify-content-end
 {
     padding: 10px;
     border-radius: 10px;
 }
-.nav a{
-    color: blanchedalmond;
+
+a{
+    text-decoration: none;
+}
+.nav a
+{
+    color: #FFF;
     font-size: 19px;
 }
 
 .nav a:hover{
-    color: #FFF;
-    
+    color: #111;   
 }
 
 .frmbody
@@ -76,5 +73,32 @@ tr
 
 .carteira h2{
     color: #FFF;
+}
 
+.card .texto
+{
+    background-color:#F2F2F2;
+    border: 2px solid #D95555;
+} 
+
+.card .texto:hover
+{
+    background-color:#D95555;
+} 
+
+
+a .texto{
+    color:#D91A1A;
+}
+
+a .texto:hover{
+    color: #F2F2F2;
+}
+
+.card .btn a{
+    color: #FFF;
+}
+
+.botoes a{
+    color: #FFF;
 }

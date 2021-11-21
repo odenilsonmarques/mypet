@@ -2,46 +2,51 @@
 @section('title','home')
 
 @section('content')
-    <div class="row">
-        <div class="container">
+    <div class="container">
+        <div class="row">
             <div class="col-sm-12 text-center" id="imagem">
-                <img src="{{('assets/img/pet1.png')}}" alt="">
-                <h3 class="textoMeuPet">Meu Pet</h3>
+                <img src="{{('assets/img/pata.png')}}" alt="">
+                <p class="textoMeuPet">Meu Pet</p>
             </div>
         </div>
-    </div><br/>
-    <div class="row">
-        <div class="col-sm-3 text-center">
-            <div class="card bg-secondary">
-                <div class="card-body" id="texto">
-                    <a href="{{route('cadPetAdd')}}">Cadastrar Pet</a>
-                </div>
+        <div class="row">
+            <div class="col-sm-3 text-center">
+                <a href="{{route('cadPetAdd')}}">
+                    <div class="card">
+                        <div class="card-body texto">
+                            Cadastrar Pet
+                        </div>
+                    </div>
+                </a>
             </div>
-        </div>
-        <div class="col-sm-3 text-center">
-            <div class="card bg-secondary">
-                <div class="card-body" id="texto">
-                    <a href="{{route('allVaccinesAll')}}">Vacinas</a>
-                </div>
+            <div class="col-sm-3 text-center">
+                <a href="{{route('allVaccinesAll')}}">
+                    <div class="card">
+                        <div class="card-body texto">
+                            Vacinas
+                        </div>
+                    </div>
+                </a>
             </div>
-        </div>
+            <div class="col-sm-3 text-center">
+                <a href="{{route('allPetsAll')}}">
+                    <div class="card">
+                        <div class="card-body texto">
+                            Pets
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-
-        <div class="col-sm-3 text-center">
-            <div class="card bg-secondary">
-                <div class="card-body" id="texto">
-                    <a href="{{route('allPetsAll')}}">Pets</a>
-                </div>
+            <div class="col-sm-3 text-center texto">
+                <a href="{{route('walletPetList')}}">
+                    <div class="card ">
+                        <div class="card-body texto">
+                            Carteira de Vacina
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
-
-        <div class="col-sm-3 text-center">
-            <div class="card bg-secondary">
-                <div class="card-body" id="texto">
-                    <a href="{{route('walletPetList')}}">Carteira de Vacina</a>
-                </div>
-            </div>
-        </div>
-
     </div>
 @endsection

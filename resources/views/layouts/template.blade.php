@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="container">
-            <ul class="nav justify-content-end navbar-secondary bg-secondary">
+            <ul class="nav justify-content-end navbar-secondary">
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('pageHome')}}">Pagina Inicial</a>
                 </li>
@@ -19,13 +19,11 @@
                     <a class="nav-link" href="#">Sair</a>
                 </li>
             </ul>
-        </div>
+        </div><br>
     </header>
 
     <article>
-        <div class="container frmbody">
-            @yield('content')
-        </div>
+        @yield('content')
     </article>
 
     <footer>
@@ -33,6 +31,7 @@
     </footer>
 
     <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/js/script.js')}}"></script>
 </body>
 </html>
 
