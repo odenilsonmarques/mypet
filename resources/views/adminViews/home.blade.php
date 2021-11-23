@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center" id="imagem">
-                <img src="{{('assets/img/pata.png')}}" alt="">
+                <img src="{{('assets/img/patarosa2.png')}}" alt="">
                 <p class="textoMeuPet">Meu Pet</p>
             </div>
         </div>

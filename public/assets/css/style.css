@@ -6,15 +6,15 @@ img
 {
     width: 200px;
     height: 200px;
-    margin-top: 70px;
-    border-radius: 100px;
+    /* margin-top: 70px; */
+    /* border-radius: 100px; */
 
 }
 .textoMeuPet
 {
     margin-top: 20px;
     margin-bottom: 25px;
-    color:#D91A1A;
+    color:#D95555;
     font-size: 30px;
     font-weight: bolder;
 }
@@ -56,23 +56,25 @@ tr
     text-align: center;
 }
 
-.carteira img
+.container .carteira img
 {
-    height: 150px;
-    width:  150px;
-    border: 2px solid #FFF;
-    border-radius: 100px;
-    margin-top: 10px;
+    height: 160px; 
+    width:  140px;
+    /* border: 2px solid #FFF; */
+    /* border-radius: 100px; */
+    margin-top: 15px;
+    /* border: 1px solid red; */
     
 }
 .carteira
 {
-    background-color: dimgray;
+    background-color: #F2F2F2;
     border-radius: 10px;
 }
 
 .carteira h2{
-    color: #FFF;
+    color: #D95555;
+    padding-bottom: 20px;
 }
 
 .card .texto
@@ -101,4 +103,19 @@ a .texto:hover{
 
 .botoes a{
     color: #FFF;
+}
+
+.container .petCarteira{
+    padding: 40px;
+}
+table  tr.primeiraLinha{
+    background-color: #D95555;
+    color: #FFF;
+}
+table tr.segundaLinha{
+    margin-top: 30px;
+    background-color: #D95555;
+}
+.table-responsive{
+    border-radius: 10px;
 }
