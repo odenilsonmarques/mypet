@@ -1,0 +1,46 @@
+body{
+    background-color: #ffffff;
+}
+.nav{
+    margin-top: 20px;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+    margin-top: 100px;
+    font-weight: bolder;
+}
+h2{
+    text-align: center;
+    margin-top: 100px;
+    color: #F29494;
+    font-weight: bolder;
+
+}
+#inforbody{
+    margin-top: 40px;
+}
+
+p.text{
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.textoPrincipal img{
+    width: 180px;
+    height: 180px;
+    margin-top: 30px;
+}
+.footer{
+    margin-top: 180px;
+}
+li{
+    text-decoration: none;
+    text-transform: none;
+}
+svg#icon{
+    color: #F29494;
+}
